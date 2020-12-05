@@ -3,8 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 class Counter extends Component{
     state = {
-        count:0,
-        products:[{name:"product 1"},{name:"product 2"}]
+        count:this.props.counter.value
     }
 
     handleIncreament = () =>{
@@ -37,14 +36,12 @@ class Counter extends Component{
                 <h1>Cart</h1>
                 <div className="row">
                     <div className="col-md-4">
-                        Product 1
                     </div>
                     <div className="col-md-4">
-
                         <button className="badge-primary" onClick={this.handleDecreament}>decreament</button> <span className={this.getBedgeClass()}>{this.getCounter()} </span>  <button className="badge-primary" onClick={this.handleIncreament}>Increament</button>
                     </div>
                     <div className="col-md-4">
-                        $43.00
+                    <button className="badge-danger" onClick={() => this.props.onDelete(this.props.counter.id)}>Delete</button>
                     </div>
                 </div>
             </div>
