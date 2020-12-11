@@ -2,16 +2,6 @@ import React, {Component} from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
 class Counter extends Component{
-
-    // handleDecreament = () =>{
-    //     const {count} = this.state;
-    //     if(count === 0){
-    //         this.setState({count: 0});
-    //         return;
-    //     }
-    //     this.setState({count: this.state.count - 1});
-    // }
-
      getCounter(){
         const {value} = this.props.counter;
         return value === 0 ? "Zero" : value;
